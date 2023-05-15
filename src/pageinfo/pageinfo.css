@@ -1,0 +1,249 @@
+.circle-with-icons {
+    width: 300px;
+    padding: 35px 0 45px;
+    border: 4px solid black;
+    border-radius: 50%;
+}
+
+.museum {
+    -webkit-animation: museummove 10s infinite;
+            animation: museummove 10s infinite;
+}
+
+.economic {
+    -webkit-animation: economicmove 10s infinite;
+            animation: economicmove 10s infinite;
+}
+
+.brain {
+    -webkit-animation: brainmove 10s infinite;
+            animation: brainmove 10s infinite;
+}
+
+.government {
+    -webkit-animation: governmentmove 10s infinite;
+            animation: governmentmove 10s infinite;
+}
+
+.texts-page-info {
+    width: 60%;
+}
+
+.texts-page-info p {
+    line-height: 23px;
+    font-weight: 100;
+    font-size: 23px;
+}
+
+.row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 50px;
+}
+
+.row-reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    gap: 50px;
+}
+
+@-webkit-keyframes museummove {
+    0% {
+        -webkit-transform: translate(0 , 0);
+                transform: translate(0 , 0);
+    }
+    25% {
+        -webkit-transform: translate(75px , 75px);
+                transform: translate(75px , 75px);
+    }
+    50% {
+        -webkit-transform: translate(0 , 140px);
+                transform: translate(0 , 140px);
+    }
+    75% {
+        -webkit-transform: translate(-75px, 75px);
+                transform: translate(-75px, 75px);
+    }
+}
+
+@keyframes museummove {
+    0% {
+        -webkit-transform: translate(0 , 0);
+                transform: translate(0 , 0);
+    }
+    25% {
+        -webkit-transform: translate(75px , 75px);
+                transform: translate(75px , 75px);
+    }
+    50% {
+        -webkit-transform: translate(0 , 140px);
+                transform: translate(0 , 140px);
+    }
+    75% {
+        -webkit-transform: translate(-75px, 75px);
+                transform: translate(-75px, 75px);
+    }
+}
+
+@-webkit-keyframes economicmove {
+    0% {
+        -webkit-transform: translate(0 , 0);
+                transform: translate(0 , 0);
+    }
+    25% {
+        -webkit-transform: translate(-80px ,75px );
+                transform: translate(-80px ,75px );
+    }
+    50% {
+        -webkit-transform: translate(-170px , 0);
+                transform: translate(-170px , 0);
+    }
+    75% {
+        -webkit-transform: translate(-80px,-75px);
+                transform: translate(-80px,-75px);
+    }
+}
+
+@keyframes economicmove {
+    0% {
+        -webkit-transform: translate(0 , 0);
+                transform: translate(0 , 0);
+    }
+    25% {
+        -webkit-transform: translate(-80px ,75px );
+                transform: translate(-80px ,75px );
+    }
+    50% {
+        -webkit-transform: translate(-170px , 0);
+                transform: translate(-170px , 0);
+    }
+    75% {
+        -webkit-transform: translate(-80px,-75px);
+                transform: translate(-80px,-75px);
+    }
+}
+
+@-webkit-keyframes brainmove {
+    0% {
+        -webkit-transform: translate(0 , 0);
+                transform: translate(0 , 0);
+    }
+    25% {
+        -webkit-transform: translate(-80px , -65px);
+                transform: translate(-80px , -65px);
+    }
+    50% {
+        -webkit-transform: translate(0 , -140px);
+                transform: translate(0 , -140px);
+    }
+    75% {
+        -webkit-transform: translate(80px , -65px);
+                transform: translate(80px , -65px);
+    }
+}
+
+@keyframes brainmove {
+    0% {
+        -webkit-transform: translate(0 , 0);
+                transform: translate(0 , 0);
+    }
+    25% {
+        -webkit-transform: translate(-80px , -65px);
+                transform: translate(-80px , -65px);
+    }
+    50% {
+        -webkit-transform: translate(0 , -140px);
+                transform: translate(0 , -140px);
+    }
+    75% {
+        -webkit-transform: translate(80px , -65px);
+                transform: translate(80px , -65px);
+    }
+}
+
+@-webkit-keyframes governmentmove {
+    0% {
+        -webkit-transform: translate(0 , 0);
+                transform: translate(0 , 0);
+    }
+    25% {
+        -webkit-transform: translate(85px , -80px);
+                transform: translate(85px , -80px);
+    }
+    50% {
+        -webkit-transform: translate(170px , 0);
+                transform: translate(170px , 0);
+    }
+    75% {
+        -webkit-transform: translate(85px , 80px);
+                transform: translate(85px , 80px);
+    }
+}
+
+@keyframes governmentmove {
+    0% {
+        -webkit-transform: translate(0 , 0);
+                transform: translate(0 , 0);
+    }
+    25% {
+        -webkit-transform: translate(85px , -80px);
+                transform: translate(85px , -80px);
+    }
+    50% {
+        -webkit-transform: translate(170px , 0);
+                transform: translate(170px , 0);
+    }
+    75% {
+        -webkit-transform: translate(85px , 80px);
+                transform: translate(85px , 80px);
+    }
+}
+
+@media(max-width : 1200px) and (min-width:651px) {
+    .circle-with-icons {
+        -webkit-transform: scale(0.8 , 0.8);
+            -ms-transform: scale(0.8 , 0.8);
+                transform: scale(0.8 , 0.8);
+    }
+}
+
+@media(max-width: 650px) {
+    .row {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+
+    .row-reverse {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+
+    .circle-with-icons {
+        -webkit-transform: scale(0.7 , 0.7);
+            -ms-transform: scale(0.7 , 0.7);
+                transform: scale(0.7 , 0.7);
+    }
+
+    .texts-page-info {
+        width: 100%;
+    }
+    .texts-page-info p {
+        font-size: 20px;
+        line-height: 23px;
+        font-weight: 400;
+    }
+}
+
+@media(max-width : 1200px) and (min-width:651px) {
+    .texts-page-info p {
+        font-size: 18px;
+    }
+}
