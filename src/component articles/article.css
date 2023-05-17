@@ -145,7 +145,7 @@
     display: none;
 }
 
-.not-mobile-btn {
+.-mobile-btn {
     display: inline-block;
 }
 

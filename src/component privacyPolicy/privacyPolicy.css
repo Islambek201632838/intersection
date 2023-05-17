@@ -1,0 +1,83 @@
+@media(max-width:650px) {
+
+    .textParag {
+        margin-left: 27px;
+        margin-right: 26px;
+        margin-top: 15px;
+        /* width: 370px; */
+        font-size: 16px;
+        line-height: 18px;
+        font-family: 'Times New Roman';
+        color: #000000;
+    }
+
+    .firstHeaderText {
+        /* width: 377px;
+        height: 68px; */
+        margin-left: 27px;
+        margin-right: 26px;
+        font-family: 'Times New Roman';
+        color: #000000;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 140%;
+        /* or 34px */
+        text-align: center;
+    
+    }
+
+    .space {
+        height: 25px;
+    }
+    
+    .space2 {
+        height: 45px;
+    }
+    
+}
+
+@media(max-width : 2000px) and (min-width:651px) {
+    .textParag {
+        margin-left: 110px;
+        margin-right: 110px;
+        margin-top: 15px;
+        /* width: 370px; */
+        font-size: 24px;
+        line-height: 27.6px;
+        font-family: 'Times New Roman';
+        color: #000000;
+    
+    }
+
+    .firstHeaderText {
+        /* width: 377px;
+        height: 68px; */
+        margin-left: 271px;
+        margin-right: 271px;
+        font-family: 'Times New Roman';
+        color: #000000;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 140%;
+        /* or 34px */
+        text-align: center;
+    
+    }
+
+    .space {
+        height: 90px;
+    }
+    
+    .space2 {
+        height: 100px;
+    }
+
+
+    .padding {
+        padding-left: 193px;
+        padding-right: 193px;
+    }
+}
+

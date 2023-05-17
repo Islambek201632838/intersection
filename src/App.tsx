@@ -7,6 +7,7 @@ import { Article } from './component articles/article';
 import { Lectures } from './component lectures/lectures';
 import { Newscomponent } from './component news/newscard';
 import { Lecturescomponent } from './component lectures/lecturescard';
+import {PrivacyPolicy} from './component privacyPolicy/privacyPolicy';
 import zapyatie from './img/“.png'
 import mobileGrayLogo from './img/mobile-menu.png'
 import newslogo from './img/news.png'
@@ -666,6 +667,7 @@ function App() {
                     <Route path='/lectures' element={<Lectures />} />
                     <Route path='/' element={<HomePage />} />
                     <Route path='/news' element={<News />} />
+                    <Route path='/privacyPolicy' element={<PrivacyPolicy />} />
                 </Routes>
             </Router>
         </>
@@ -990,7 +992,7 @@ export function Footer(props: footerprops) {
                         <div className='color-white footer-navigation'>
                             <h3>{props.lang === 'ru' ? 'ДОП.ИНФОРМАЦИЯ' : 'ADDITIONAL INFORMATION'}</h3>
                             <Link to=''>{props.lang === 'ru' ? 'Контакты' : 'Contacts'}</Link><br /><br />
-                            <Link to=''>{props.lang === 'ru' ? 'Политика конфиденциальности' : 'Privacy policy'}</Link><br /><br />
+                            <Link to='/privacyPolicy'>{props.lang === 'ru' ? 'Политика конфиденциальности' : 'Privacy policy'}</Link><br /><br />
                             <Link to=''>{props.lang === 'ru' ? 'О нас' : 'About us'}</Link><br /><br />
                         </div>
                         <div className='color-white footer-navigation job'>
@@ -1013,7 +1015,7 @@ export function Footer(props: footerprops) {
                     <div className='mobile-flex flex-wrap justify-between footer'>
                         <div className='color-white footer-navigation'>
                             <Link to='' style={{ fontSize: 22 }}>{props.lang === 'ru' ? 'Контакты' : 'Contacts'}</Link><br /><br />
-                            <Link to='' style={{ fontSize: 22 }}>{props.lang === 'ru' ? 'Политика конфиденциальности' : 'Privacy policy'}</Link><br /><br />
+                            <Link to='/privacyPolicy' style={{ fontSize: 22 }}>{props.lang === 'ru' ? 'Политика конфиденциальности' : 'Privacy policy'}</Link><br /><br />
                             <Link to='' style={{ fontSize: 22 }}>{props.lang === 'ru' ? 'Карта сайта' : 'Site map'}</Link><br /><br />
                         </div>
                         <div className='color-white footer-navigation'>
