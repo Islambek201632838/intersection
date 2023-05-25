@@ -369,6 +369,17 @@ return (
                 <option value="">Январь</option>
                 <option value="">Февраль</option>
                 <option value="">Март</option>
+                <option value="">Апрель</option>
+                <option value="">Май</option>
+                <option value="">Июнь</option>
+                <option value="">Июль</option>
+                <option value="">Август</option>
+                <option value="">Сентябрь</option>
+                <option value="">Октябрь</option>
+                <option value="">Ноябрь</option>
+                <option value="">Декабрь</option>
+
+
             </select>  
 
             <select className="rightside3_select3" name="" id="">
