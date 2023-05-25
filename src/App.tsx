@@ -8,6 +8,7 @@ import { Lectures } from './component lectures/lectures';
 import { Newscomponent } from './component news/newscard';
 import { Lecturescomponent } from './component lectures/lecturescard';
 import {PrivacyPolicy} from './component privacyPolicy/privacyPolicy';
+import {Donates} from './component donates/donates';
 import zapyatie from './img/“.png'
 import mobileGrayLogo from './img/mobile-menu.png'
 import newslogo from './img/news.png'
@@ -668,6 +669,7 @@ function App() {
                     <Route path='/' element={<HomePage />} />
                     <Route path='/news' element={<News />} />
                     <Route path='/privacyPolicy' element={<PrivacyPolicy />} />
+                    <Route path='/donates' element={<Donates/>} />
                 </Routes>
             </Router>
         </>
@@ -823,13 +825,13 @@ export function Navigation(props: navprops) {
     let [burgerMenu, setBurgerMenu] = useState<number>(0)
     let [secondBurgerMenu, setSecondBurgerMenu] = useState<number>(80)
     let links = {
-        urls: ['/news', '/lectures', '/article', '', '', ''],
+        urls: ['/news', '/lectures', '/article', '', '/donates', ''],
         textsRU: ['Новости', 'Лекции', 'Статьи', 'Книги', 'Пожертвование', 'О нас'],
         textsEN: ['News', 'Lectures', 'Articles', 'Books', 'Donation', 'About us']
     }
 
     let mobileLinks = {
-        urls: ['/', '/news', '/lectures', '/article', '', ''],
+        urls: ['/', '/news', '/lectures', '/article', '', '/donates'],
         textsRU: ['Главная', 'Новости', 'Лекции', 'Статьи', 'Книги', 'Пожертвование'],
         textsEN: ['Home', 'News', 'Lectures', 'Articles', 'Books', 'Donation'],
         imgurls: [mobileGrayLogo, newslogo, lecture, states, book, donation]
