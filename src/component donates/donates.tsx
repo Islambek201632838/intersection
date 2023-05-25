@@ -1,13 +1,39 @@
 import React, { useState, useEffect } from "react";
 import './donates.css';
 import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
-import {Navigation } from '../App';
 import line from './img/Line 10.png';
 import HomePage from '../App';
+import App from "../App";
 import logo from './img/Group 50.png';
+import google from './img/google.png';
+import paypal from './img/PayPal.png';
+import visa from './img/visa.png';
+import visa2 from './img/visa2.png';
+import masterCard from './img/MasterCard.png';
+import arrow from './img/arrow.png';
+import right_arrow from './img/right-arrow 1.png';
+import line13 from './img/Line 13.png';
+import line14 from './img/Line 14.png';
+
 
 export let Donates = () => {
+
     const [lang, setLang] = useState('ru');
+    const [buttonClick, setButtonClick] = useState(false);
+    const [buttonClick2, setButtonClick2] = useState(true);
+    const [payment, setPayment] = useState('');
+    const [donationAmount, setDonationAmount] = useState('2000');
+    const [name, setName] = useState('');
+    const [surname, setSurname] = useState('');
+    const [email, setEmail] = useState('');
+    const [adress, setAdress] = useState('');
+    const [postcode, setPostcode] = useState('');
+    const [city, setCity] = useState('');
+    const [government, setGovernment] = useState('');
+    const [state, setState] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [rightPage, setRightPage] = useState(1);
+
 
     const donatesDB = {
         
@@ -42,50 +68,347 @@ export let Donates = () => {
         text11: 'After the payment is completed, you will receive an email confirming your donation and a payment receipt. Your donation will be used to support our work on the study of the interrelationships between economics, politics and culture. ',       
         text12: 'If you have any questions, feel free to contact our support team. Thank you again for your support!'
     }
-    return (<>
     
-   
+
+
+return (
+    
+    <>
     <div className="center">
             
-       <img src={logo} className="logoDonates" alt="" />
+      <Link to = '/'><img src={logo} className="logoDonates" alt="" /></Link> 
        
-       </div>
+    </div>
+
        <div className="mainDivs">
 
             <div className="leftside">
 
-            <h1 className="donatesHeading">  {lang === 'ru' ? donatesDB.heading : donatesDBeng.heading } </h1>
-            <p className="donatesText">  {lang === 'ru' ? donatesDB.text1 : donatesDBeng.text1 }  </p>
-            <p className="donatesText">  {lang === 'ru' ? donatesDB.text2 : donatesDBeng.text2 }  </p>
-                
-                </div>
-            
-            <div className="rightside">
-            <p className="rightText1">Выберите сумму</p>
-
+                <h1 className="donatesHeading">  {lang === 'ru' ? donatesDB.heading : donatesDBeng.heading } </h1>
+                <p className="donatesText">  {lang === 'ru' ? donatesDB.text1 : donatesDBeng.text1 }  </p>
+                <p className="donatesText">  {lang === 'ru' ? donatesDB.text2 : donatesDBeng.text2 }  </p>
+                    
             </div>
+            
+        {rightPage==1 ? <RightSide/> : null}
+
+        {rightPage==2 ? <RightSide2 payment={payment} donationAmount={donationAmount}/> : null}
+                    
+        
+        {rightPage== 3  ? <RightSide3 name = {name}
+                                      surname = {surname}
+                                      email = {email}
+                                      adress = {adress}
+                                      postcode = {postcode}
+                                      city = {city}
+                                      government = {government}
+                                      state = {state}
+                                      phoneNumber = {phoneNumber}
+                                      
+                            /> : null}
+
+
+
 
        </div>
 
-            <img className = "lineBr" src={line} alt="" />
-            <div className="marginTopFooter"></div>
-            <p className="donatesFooter">  {lang === 'ru' ? donatesDB.text3 : donatesDBeng.text3 }  </p>
-            <p className="donatesFooter">  {lang === 'ru' ? donatesDB.text4 : donatesDBeng.text4 }  </p>
-            <p className="donatesFooter">  {lang === 'ru' ? donatesDB.text5 : donatesDBeng.text5 }  </p>
-            <p className="donatesFooter">  {lang === 'ru' ? donatesDB.text6 : donatesDBeng.text6 }  </p>
-            <p className="donatesFooter">  {lang === 'ru' ? donatesDB.text7 : donatesDBeng.text7 }  </p>
-            <p className="donatesFooter">  {lang === 'ru' ? donatesDB.text8 : donatesDBeng.text8 }  </p>
-            <p className="donatesFooter">  {lang === 'ru' ? donatesDB.text9 : donatesDBeng.text9 }  </p>
-            <p className="donatesFooter">  {lang === 'ru' ? donatesDB.text10 : donatesDBeng.text10 }  </p>
-            <p className="donatesFooter">  {lang === 'ru' ? donatesDB.text11 : donatesDBeng.text11 }  </p>
-            <p className="donatesFooter">  {lang === 'ru' ? donatesDB.text12 : donatesDBeng.text12 }  </p>
-            <div className="marginBottomFooter"></div>
-        
-     
-        
-    
+    <div style={{display:'grid', placeItems: 'center'}}> <img className = "lineBr" src={line} alt="" /> </div>
+      
 
+
+            <div className="footerCenter">
+                <div className="footerWrapper">
+
+                    <p className="donatesFooter">  {lang === 'ru' ? donatesDB.text3 : donatesDBeng.text3 }  </p>
+                    <p className="donatesFooter">  {lang === 'ru' ? donatesDB.text4 : donatesDBeng.text4 }  </p>
+                    <p className="donatesFooter">  {lang === 'ru' ? donatesDB.text5 : donatesDBeng.text5 }  </p>
+                    <p className="donatesFooter">  {lang === 'ru' ? donatesDB.text6 : donatesDBeng.text6 }  </p>
+                    <p className="donatesFooter">  {lang === 'ru' ? donatesDB.text7 : donatesDBeng.text7 }  </p>
+                    <p className="donatesFooter">  {lang === 'ru' ? donatesDB.text8 : donatesDBeng.text8 }  </p>
+                    <p className="donatesFooter">  {lang === 'ru' ? donatesDB.text9 : donatesDBeng.text9 }  </p>
+                    <p className="donatesFooter">  {lang === 'ru' ? donatesDB.text10 : donatesDBeng.text10 }  </p>
+                    <p className="donatesFooter">  {lang === 'ru' ? donatesDB.text11 : donatesDBeng.text11 }  </p>
+                    <p className="donatesFooter">  {lang === 'ru' ? donatesDB.text12 : donatesDBeng.text12 }  </p>
+                
+                </div>
+            </div>
     
     </>) 
+    
+    
+    function RightSide() {
+        return (
+
+        <div className="rightside">
+                
+        <p className="rightText1">Выберите сумму</p>
+        <p className="rightText2">Tne Intersection Corporation (TIC) Ваш вклад пойдет на пользу.</p>
+        
+        <div className="priceboxes">
+
+            <div onClick={() => setDonationAmount('2000')} 
+                className={donationAmount=='2000' ?"pricebox1Active":"pricebox1"}>2000₸  </div>
+
+            <div onClick={() => setDonationAmount('10,000')} 
+                className={donationAmount=='10,000' ?"pricebox2Active":"pricebox2"}>10,000₸ </div>
+
+            <div onClick={() => setDonationAmount('25,000')} 
+                className={donationAmount=='25,000' ?"pricebox2Active":"pricebox2"}>25,000₸ </div>
+
+            <div onClick={() => setDonationAmount('100,000')} 
+                className={donationAmount=='100,000' ?"pricebox3Active":"pricebox3"}>100,000₸ <br /> </div>
+            
+            <div className="pricebox5"> 
+                    <div className="inputbox">
+                        <input type="text"
+                            onChange={e => setDonationAmount(e.target.value)} 
+                            value={donationAmount}
+                            
+                            className="inputbox2"/>₸</div> </div>
+                            
+            
+            </div>
+
+        <p className="rightText3">Делайте это ежемесячно !</p>
+        
+        <button onClick={() => [setButtonClick(true), setButtonClick2(false)]}
+                className={buttonClick ?"button1Active" :"button1"} >
+                
+                <p>✓</p>
+
+                <img src={arrow} 
+                     className="arrow"      
+                     alt="" />
+
+            Да, рассчитывайте на меня !</button>
+
+        <button onClick={() => [setButtonClick(false), setButtonClick2(true)]} 
+                className={buttonClick2 ? "button2Active" :"button2"}> 
+                <p>✓</p>
+            Нет, пожертвовать один раз
+        </button>
+        
+        
+        
+        <div className="rightText4"> <p>Начните ежемесячное пожертвование сегодня, чтобы инвестировать в развитие и популяризацию науки и интеллектуализма.</p>  </div>
+    
+       
+        
+        <button onClick={() => [setPayment('googlePay'), setRightPage(2)]} className="cardbox1">
+
+            <img src={google} className="google" alt="" />
+            <p className="pay">Pay</p>
+
+        </button>
+
+        <button onClick={() => [setPayment('PayPal'), setRightPage(2)]} className="cardbox2">
+
+            <img src={paypal} className="paypal" alt="" /> 
+
+        </button>
+    
+        <button onClick={() => [setPayment('картой'), setRightPage(2)]} className="cardbox3">
+
+            <img src={visa} className="visa" alt="" />
+            <img src={masterCard} className="masterCard" alt="" />
+            <p>Оплата картой</p>
+
+        </button>
+
+        </div> )
+        
+    }
+
+    function RightSide2(props:any) {
+
+        return (
+
+
+            <div className="rightside2">
+                <div className="rightside2_text">
+    
+                    <p  onClick={() => [setRightPage(1)]} 
+                        className="rightside2_text2">
+                            <p className="rightside2_text1">✓</p>
+                                Сумма {props.donationAmount}₸</p>
+
+                    <p className="rightside2_text3">2)Подробности</p>
+
+                    <p className="rightside2_text4">3)Оплата</p>
+
+                    <img src={line13} alt="" className="line13" />
+
+                    <img src={line14} alt="" className="line14"/>
+
+                    <p className="rightside2_text5">Завершите свой взнос в размере 250 долларов:</p>
+                   
+                    <p className="rightside2_text6">* Все поля обязательны, если не указано иное.</p>
+                   
+                    <input 
+                            className="inputBox1" 
+                            placeholder='Эл.адрес'
+                            value={email} 
+                            onChange={e =>setEmail(e.target.value)}
+                            type="text" />
+
+                          <p>{email}</p>
+
+                    <input className="inputBox2" 
+                           placeholder='Имя' 
+                           value={name}
+                           onChange={e => setName(e.target.value)}
+                           type="text" 
+                           />
+
+                    <input className="inputBox3" 
+                           placeholder='Фамилия'
+                           value={surname} 
+                           onChange={e => setSurname(e.target.value)}
+                           type="text" />
+
+                    <input className="inputBox4" 
+                           placeholder='Номер, улица, квартира'
+                           value={adress}
+                           onChange={e => setAdress(e.target.value)}
+                           type="text" />
+
+                    <input className="inputBox5" 
+                           placeholder='Почтовый индекс'
+                           value={postcode}
+                           onChange={e => setPostcode(e.target.value)}
+                           type="text" />
+
+                    <input className="inputBox6" 
+                           placeholder='Город' 
+                           value={city}
+                           onChange={e => setCity(e.target.value)}
+                           type="text" />
+
+                    <input className="inputBox7" 
+                           placeholder='Штат' 
+                           value={state}
+                           onChange={e => setState(e.target.value)}
+                           type="text" />
+
+                    <input className="inputBox8" 
+                           placeholder='Государство'
+                           value={government}
+                           onChange={e => setGovernment(e.target.value)} 
+                           type="text" />
+
+                    <input className="inputBox9" 
+                           placeholder='Мобильный телефон'
+                           value = {phoneNumber} 
+                           onChange={e => setPhoneNumber(e.target.value)} 
+                           type="text" />
+
+                    <div onClick={() => setRightPage(3)}
+                        className="paymentBox">Оплата {props.payment}</div>
+            
+            </div>  
+            
+    
+        </div>
+
+        )
+
+    }
+
+    function RightSide3(props:any) {
+
+        return ( 
+        
+        <div className="rightside3">
+
+            <p className="rightside3_text1">TIC пожертвование</p>
+            <p className="rightside3_text2">Информация о вас</p>
+            
+            <div className="rightside3_text3">
+                <p>{props.name} {props.surname}</p>
+                <p>{props.email}</p>
+                <p>{props.phoneNumber}</p>
+                <p>{props.adress} {props.postcode}</p>
+            </div>
+
+            <p  onClick={() => [setRightPage(2), setName(''), setSurname(''),
+                                setCity(''), setPhoneNumber(''), setGovernment(''),
+                                setState(''), setEmail(''), setPostcode(''),
+                                setAdress('')]
+                                }
+                className="rightside3_text4" >Исправить <img src = {right_arrow} alt="" /></p>
+
+        
+        <p className = "rightside3_text5">Способ оплаты</p>
+        
+        <div style={{display:'flex', alignItems: 'center'}}>
+            <input className="rightside3_radio"  type="radio"/> 
+                <img className= "rightside3_visa" src={visa2} alt="" /> <img className= "rightside3_masterCard" src={masterCard} alt="" /> 
+        </div>
+        <br/>
+
+        <div style={{display:'flex', alignItems: 'center'}}>
+                <input className="rightside3_radio" type="radio"/> 
+                    <img className="rightside3_PayPal" src={paypal} alt=""/>
+                
+                <input className="rightside3_radio" type="radio"/> 
+                        <img className="rightside3_google" src={google} alt="" /> 
+                    <p className="rightside3_googlePay">Pay</p> 
+            </div>
+       
+        <input className="rightside3_cardInput" 
+               type="text"
+               placeholder="Номер карты" />
+               
+            <select className="rightside3_select1" name="" id="">
+                <option value="">01</option>
+                <option value="">02</option>
+                <option value="">03</option>
+            </select>
+
+             <select className="rightside3_select2" name="" id="">
+                <option value="">Январь</option>
+                <option value="">Февраль</option>
+                <option value="">Март</option>
+            </select>  
+
+            <select className="rightside3_select3" name="" id="">
+                <option value="">2023</option>
+                <option value="">2024</option>
+                <option value="">2025</option>
+            </select>  
+
+        <p className="rightText3">Делайте это ежемесячно !</p>
+        
+        <button onClick={() => [setButtonClick(true), setButtonClick2(false)]}
+                className={buttonClick ?"button1Active" :"button1"} >
+                <p>✓</p>
+                <img src={arrow} 
+                     className="arrow"      
+                     alt="" />
+            Да, рассчитывайте на меня !</button>
+
+        <button onClick={() => [setButtonClick(false), setButtonClick2(true)]} 
+                className={buttonClick2 ? "button2Active" :"button2"}> 
+                <p>✓</p>
+            Нет, пожертвовать один раз
+        </button>
+        
+    
+        
+        <div className="rightText4"> <p>Начните ежемесячное пожертвование сегодня, чтобы инвестировать в развитие и популяризацию науки и интеллектуализма.</p>  </div>
+    
+        <div className="dropform"
+             onClick={() => [setRightPage(1), setName(''), setSurname(''),
+                             setCity(''), setPhoneNumber(''), setGovernment(''),
+                             setState(''), setEmail(''), setPostcode(''),
+                             setAdress('')]
+                      }
+        
+        > Не {name}? Сбросьте форму</div>
+                                
+            </div>
+        )
+    }
+
 
 }

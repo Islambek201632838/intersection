@@ -1,6 +1,8 @@
 *{
     padding: 0;
-    margin: 0
+    margin: 0;
+    font-family: 'Times New Roman';
+    color: #000000;
 }
 
 @media(max-width : 650px) {
@@ -9,45 +11,32 @@
         display: grid;
         place-items: center;
     }
+
     .logoDonates{
         margin-top: 30px;
         width: 272px;
         
     }
 
-    .center {
-        display: grid;
-        place-items: center;
-    }
-
-    .logoDonates{
-        margin-top: 50px;
-        width: 523px;
-       
-    }
 
     .mainDivs {
-        display: flex;
-        flex-flow: column nowrap;
-
+       display: grid;
+       place-items: center;
     }
+    
     
     .rightside {
         margin-top: 40px;
-        margin-left: 30px;
         width: 370px;
-        height: 500px;
-        border: 1px rebeccapurple solid;
+        /* height: 500px; */
+        
     }
-
 
 
 
     .donatesHeading, .donatesText {
-        margin-left: 30px;
-        font-family: 'Times New Roman';
+        /* margin-left: 30px; */
         font-style: normal;
-        color: #000000;
         width: 370px;
     }
     
@@ -68,34 +57,583 @@
     
     }
     
-    .donatesFooter {
-        margin-left: 60px;
-        font-size: 16px;
-        line-height: 22.4px;
-        font-family: 'Times New Roman';
-        font-style: normal;
-        color: #000000;
-        width: 310px;
-    }
     
-    .marginBottomFooter {
+
+    .footerCenter {
+        display: grid;
+        place-items: center;
+        width: 100%;
         margin-bottom: 80px;
-    }
-    
-    .marginTopFooter {
-        margin-Top: 21px;
+        margin-top: 21px;
     }
 
-    .lineBr {
+    
+    .footerWrapper {
         width: 310px;
-        margin-left: 60px; 
-        margin-right: 60px;
+
     }
+
+    .donatesFooter {
+        /* margin-left: 60px; */
+        font-size: 16px;
+        line-height: 22.4px;
+        font-style: normal;
+        /* width: 310px; */
+    }
+
+
+    .lineBr {
+       width: 370px;
+       margin-top: 50px;
+
+    }
+
+    .rightText1 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+    
+    }
+
+    .rightText2 {
+        
+        margin-top: 10px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18.4px;
+        opacity: 0.8;
+    }
+
+    .priceboxes {
+        display: flex;
+        flex-flow: row wrap;
+        margin-top: 20px;
+        
+    }
+
+
+    .pricebox1, .pricebox2,
+    .pricebox1Active, .pricebox2Active, 
+    .pricebox3, .pricebox3Active,
+    .pricebox5 {
+        
+        width: 100px;
+        height: 60px;
+        border-radius: 5px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+
+    }
+    .pricebox1, .pricebox2, .pricebox3, .pricebox5 {
+        background-color: #C7C7C7;
+    }
+ 
+    
+    .pricebox1Active, .pricebox2Active, .pricebox3Active {
+        background-color: #000000;
+        color: #FFFFFF;   
+    }
+    
+
+    .pricebox2,
+    .pricebox2Active, 
+    .pricebox5
+    {
+        margin-left: 20px;
+    }
+
+    .pricebox5 {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+
+    .inputbox {
+        background-color: white;
+        width: 75px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #000000;
+        border-radius: 5px;
+    }
+
+    .inputbox2 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+        width: 50px;
+        height: 30px;
+        outline: none;
+        border: none;
+    }
+
+    .rightText3 {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+        margin-top: 30px;
+    }
+
+    .button1, .button2,
+    .button1Active, .button2Active
+
+    {
+        width: 370px;
+        height: 50px;
+        border-radius: 5px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+        border: none;
+    }
+    
+    .button1 {
+        margin-top: 20px;
+        background: #C7C7C7;
+        color: #000000;
+        position: relative;
+    }
+
+    .button1Active {
+        margin-top: 20px;
+        background-color: #000000;
+        color: #FFFFFF;
+        position: relative;
+    }
+
+    .arrow {
+        position: absolute;
+        left: -30px;
+        top: 100px;
+        transform: rotate(-10deg);
+        width: 45px;
+        height: 45px;
+    }
+    
+    .button2 {
+        margin-bottom: 30px;
+        background: #C7C7C7;
+        color: #000000;
+    }
+
+    .button2Active {
+        margin-top: 0.12px;
+        margin-bottom: 30px;
+        background-color: #000000;
+        color: #FFFFFF;
+    }
+
+    .button1Active p, .button2Active p {
+        position: absolute;
+        margin-left: 14px;
+        color: #FFFFFF;
+    }
+
+    .button1 p, .button2 p {
+        display: none;
+    }
+
+    .rightText4 {
+        width: 368px;
+        height: 76px;
+        background: #FFFFFF;
+        border: 1px solid #000000;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 33.67px;
+             
+    }
+
+    .rightText4 p {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        width: 350px;
+        height: 54px; 
+    }
+
+    .cardbox1, .cardbox2, .cardbox3 {
+        position: relative;
+        width: 370px;
+        height: 40.22px;
+        border-radius: 5px;
+        outline: none;
+        margin-top: 8.11px;
+        border: none;
+        
+    }
+
+    .cardbox1, .cardbox3 {
+        background-color: #000000;
+        color: #FFFFFF;
+    }
+
+    .cardbox2 {
+        background-color: #C7C7C7;
+    }
+
+    .google {
+        width: 28.15px;
+        height: 67.57px;
+        position: absolute;
+        top: -10.67px;
+        left: 153px;
+        /* z-index: 2;  */
+    }
+
+    .pay {
+        font-size: 24px;
+        line-height: 27.6px;
+        color: #FFFFFF;
+        padding-left: 25px;
+    }
+
+    .paypal {
+        position: absolute;
+        top: -16.5px;
+        left: 148.8px;
+        /* z-index: 2; */
+        width: 72.39px;
+        height: 72.39px;
+    }
+
+    .visa {
+        position: absolute;
+        width: 40.22px ;
+        height: 40.22px;
+        top: 0px;
+        left: 57px;
+        /* z-index: 2; */
+        background-color: black;
+    }
+
+    .masterCard {
+        position: absolute;
+        width: 40.22px ;
+        height: 24.24px;
+        top: 8.04px;
+        left: 113.3px;
+    }
+
+    .cardbox3 p {
+        position: absolute;
+        top: 8.8px;
+        left: 169.8px;
+        font-size: 20px;
+        line-height: 23px;
+        color: #FFFFFF;
+    }
+
+    .rightside2 {
+        margin-top: 41px;
+        width: 368px;
+        height: 421px;
+        /* border: 1px black solid; */
+    }
+
+    .rightside2_text {
+        display: flex;
+        flex-flow: row nowrap;
+        position: relative;
+        justify-content: space-between;
+        width: 370px;
+    }
+
+    .rightside2_text1 {
+        color:#009A2B; 
+        font-weight:400;
+        font-size: 16px;
+        line-height: 18px;
+
+    }
+    .rightside2_text2, .rightside2_text3, .rightside2_text4 {
+
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 18.4px;
+        
+    }
+
+
+    .rightside2_text2 {display:flex}
+
+
+    .rightside2_text5 {
+
+        position:absolute;
+        top: 53px;
+        font-size: 18px;
+        line-height: 21px ;
+        width: 358px;
+        
+    }
+
+    .rightside2_text6 {
+        position:absolute;
+        top: 90px;
+        left: 151px;
+        font-size: 11px;
+        line-height: 13px;
+        width: 219px;
+
+    }
+
+    .line13 {
+        width: 370px;
+        position: absolute;
+        top: 33px;
+}
+
+    .line14 {
+        width: 280px;
+        position: absolute;
+        top: 33px;
+    }
+
+
+    .inputBox1, .inputBox2, .inputBox3,
+    .inputBox4, .inputBox5, .inputBox6,
+    .inputBox7, .inputBox8, .inputBox9
+    {
+        
+        position: absolute;
+        border: 1px solid #000000;
+        border-radius: 5px; 
+        outline: none; 
+        font-size: 16px;
+        line-height: 18.4px;
+        height: 32.03px;
+        box-sizing: border-box;
+        padding: 10px;
+
+    }
+
+    .inputBox1 {
+        width: 368.4px;
+        top: 109px;
+    }
+
+    .inputBox2 {
+        width: 176.99px;
+        top: 152px;
+    }
+
+    .inputBox3 {
+        width: 176.99px;
+        left: 190.81px;
+        top: 152px;
+    }
+
+    .inputBox4 {
+        width: 368.4px;
+        left: 0px;
+        top: 197px;
+    }
+
+    .inputBox5 {
+        width: 116.13px;
+        top: 241px;
+    }
+
+    .inputBox6 {
+        width: 128.14px;
+        top: 241px;
+        left: 128.27px;
+    }
+
+    .inputBox7 {
+        width: 100.11px;
+        top: 241px;
+        left: 268.29px;
+    }
+
+    .inputBox8 {
+        width: 116.13px;
+        top: 285px;
+    }
+
+    .inputBox9 {
+        width: 239.46px;
+        top: 285px;
+        left: 128.14px;
+    }
+
+    .paymentBox {
+        width:368.4px;
+        height: 36.04px;
+        position:absolute; 
+        top: 333px; 
+        color:white; 
+        background:#000000; 
+        font-size: 16px;
+        line-height:18.4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rightside3 {
+        width: 368px;
+        /* border: 1px black solid; */
+        margin-top: 30px;
+        /* margin-left: 102px; */
+        position: relative;
+
+    }
+
+    .rightside3_text1{
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 27.6px;
+        color: #000000;
+
+    }
+    
+    .rightside3_text2 {
+        margin-top:8px;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 27.6px;
+        color: #000000;
+
+    }
+
+    .rightside3_text3 {
+        box-sizing: border-box;
+        margin-top: 20px;
+        width: 368px;
+        height: 100.8px;
+        padding: 10px;
+        border: 1px solid #000000;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+        margin-bottom: 30px;
+    }
+
+    .rightside3_text4 {
+        position: absolute;
+        top: 124px;
+        left:248px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 130%;
+        display: flex;
+        align-items: center;
+    }
+
+    .rightside3_text4 img {
+        margin-left: 5px;
+        width: 20px;
+        height: 20px;
+    }
+
+
+    .rightside3_text5 {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 27.6px;
+    }
+    
+    .rightside3_visa {
+        margin-left: 30px;
+    }
+
+    .rightside3_masterCard {
+        margin-left: 10px; 
+    }
+
+    .rightside3_PayPal, .rightside3_google {
+        margin-left: 20px;
+    }
+
+    .rightside3_PayPal {
+        margin-right: 30px;
+    }
+
+    .rightside3_googlePay {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 27.6px;
+    }
+
+    .rightside3_radio {
+        width: 20px;
+        aspect-ratio: 1;
+        background: #FFFFFF;
+        border: 1px solid #C7C7C7;
+        outline: none;
+    }
+
+    .rightside3_cardInput {
+        box-sizing: border-box;
+        width: 368px;
+        height: 40px;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18.4px;
+        color: #000000;
+        opacity: 0.7;
+        padding: 11px;
+        margin-top: 20px;
+        }
+
+        .rightside3_select1, .rightside3_select2, .rightside3_select3 {
+            box-sizing: border-box;
+            height: 40px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 18.4px;
+            margin-top: 20px;
+            padding-left: 10px;
+           
+
+        }
+
+        .rightside3_select1 {
+            width: 50px;
+        }
+
+        .rightside3_select3 {
+            width: 184px;
+        }
+
+        .rightside3_select2 {
+            width: 134px;
+        }
+
+        .dropform {
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 17px;
+            color: #000000;
+            opacity: 0.8;
+            margin-top: 80px;
+            text-align: end; 
+        }
 
 }
 
 
-@media(max-width : 2000px) and (min-width:651px)  {
+@media(min-width:651px)  {
 
     .center {
         display: grid;
@@ -111,21 +649,21 @@
     .mainDivs {
         display: flex;
         flex-flow: row nowrap;
-
+        justify-content: center;
     }
     
     .rightside {
         margin-top: 70px;
         margin-left: 102px;
         width: 460px;
-        height: 500px;
-        border: 1px rebeccapurple solid;
+        position: relative;
+        /* height: 500px; */
+        /* border: 1px black solid; */
     }
+
     .donatesHeading, .donatesText {
-        margin-left: 110px;
-        font-family: 'Times New Roman';
+        /* margin-left: 110px; */
         font-style: normal;
-        color: #000000;
         width: 498px;
     }
     
@@ -143,31 +681,582 @@
         font-weight: 400;
         font-size: 20px;
         line-height: 23px;
-    
+
     }
     
-    .donatesFooter {
-        margin-left: 110px;
-        font-size: 20px;
-        line-height: 28px;
-        font-family: 'Times New Roman';
-        font-style: normal;
-        color: #000000;
-        width: 1060px;
-    }
     
-    .marginBottomFooter {
+    .footerCenter {
+        display: grid;
+        place-items: center;
+        margin-top: 50px;
         margin-bottom: 100px;
     }
-    
-    .marginTopFooter {
-        margin-top: 50px;
+
+    .footerWrapper {
+        width: 1060px;
+
     }
+
+    .donatesFooter {
+        /* margin-left: 110px; */
+        font-size: 20px;
+        line-height: 28px;
+        font-style: normal;
+        /* width: 1060px; */
+    }
+   
 
     .lineBr {
         width: 1060px;
-        margin-left: 106px; 
-        margin-right: 110px;
+        margin-top: 75px;
+        margin-bottom: 50px;
+        /* margin-left: 106px; 
+        margin-right: 110px; */
     }
 
+    .rightText1 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+    
+    }
+
+    .rightText2 {
+        
+        margin-top: 25px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 23px;
+        opacity: 0.8;
+    }
+
+    .priceboxes {
+        display: flex;
+        flex-flow: row wrap;
+        margin-top: 25px;
+        
+    }
+
+
+    .pricebox1, .pricebox2,.pricebox3, .pricebox5,
+    .pricebox1Active, .pricebox2Active, .pricebox3Active 
+       
+    {
+        width: 100px;
+        height: 60px;
+        border-radius: 5px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+
+    }
+
+    .pricebox1, .pricebox2, .pricebox3, .pricebox5 {
+        background-color: #C7C7C7;
+    }
+ 
+    
+    .pricebox1Active, .pricebox2Active, .pricebox3Active {
+        background-color: #000000;
+        color: #FFFFFF;   
+    }
+    
+
+    .pricebox2, .pricebox3,
+    .pricebox2Active, .pricebox3Active {
+        margin-left: 20px;
+    }
+
+    
+
+    .pricebox5 {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+
+    .inputbox {
+        background-color: white;
+        width: 75px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #000000;
+        border-radius: 5px;
+    }
+
+    .inputbox2 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+        width: 50px;
+        height: 30px;
+        outline: none;
+        border: none;
+    }
+
+    .rightText3 {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        margin-top: 25px;
+    }
+
+    .button1, .button2,
+    .button1Active, .button2Active
+
+    {
+        width: 460px;
+        height: 50px;
+        border-radius: 5px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+        border: none;
+    }
+    
+    .button1 {
+        margin-top: 9px;
+        background: #C7C7C7;
+        color: #000000;
+        position: relative;
+    }
+
+    .button1Active {
+        margin-top: 9px;
+        background-color: #000000;
+        color: #FFFFFF;
+        position: relative;
+    }
+
+    .button2 {
+        /* margin-top: 9px; */
+        margin-bottom: 37px;
+        background: #C7C7C7;
+        color: #000000;
+    }
+
+    .button2Active {
+        /* margin-top: 9px; */
+        margin-bottom: 37px;
+        background-color: #000000;
+        color: #FFFFFF;
+        
+    }
+
+    .button1Active p, .button2Active p {
+        position: absolute;
+        margin-left: 20px;
+        color: #FFFFFF;
+    }
+
+    .button1 p, .button2 p {
+        display: none;
+    }
+
+    .rightText4 {
+        width: 460px;
+        height: 95px;
+        background: #FFFFFF;
+        border: 1px solid #000000;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 61px;
+             
+    }
+
+    .rightText4 p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+        width: 369px;
+        height: 57px; 
+    }
+
+    .cardbox1, .cardbox2, .cardbox3 {
+        position: relative;
+        width: 460px;
+        height: 50px;
+        border-radius: 5px;
+        outline: none;
+        margin-top: 10px;
+        border: none;
+        
+    }
+
+    .cardbox1, .cardbox3 {
+        background-color: #000000;
+        color: #FFFFFF;
+    }
+
+    .cardbox2 {
+        background-color: #C7C7C7;
+    }
+
+    .arrow {
+        position: absolute;
+        left: -30px;
+        top: 100px;
+        transform: rotate(-10deg);
+        width: 45px;
+        height: 45px;
+    }
+
+    .google {
+        width: 35px;
+        height: 84px;
+        position: absolute;
+        top: -17px;
+        left: 191px;
+        /* z-index: 2;  */
+    }
+
+    .pay {
+        font-size: 24px;
+        line-height: 27.6px;
+        color: #FFFFFF;
+        padding-left: 30px;
+    }
+
+    .paypal {
+        position: absolute;
+        top: -20px;
+        left: 185px;
+        /* z-index: 2; */
+        width: 90px;
+        height: 90px;
+    }
+
+    .visa {
+        position: absolute;
+        width: 50px ;
+        height: 50px;
+        top: 0px;
+        left: 91px;
+        /* z-index: 2; */
+
+    }
+
+    .masterCard {
+        position: absolute;
+        width: 50px ;
+        height: 30.14px;
+        top: 10px;
+        left: 161px;
+    }
+
+    .cardbox3 p {
+        position: absolute;
+        top: 13px;
+        left: 231px;
+        font-size: 20px;
+        line-height: 23px;
+        color: #FFFFFF;
+    }
+
+    .rightside2 {
+        margin-top: 70px;
+        margin-left: 102px;
+        width: 460px;
+        height: 500px;
+        /* border: 1px black solid; */
+    }
+
+    .rightside2_text {
+        display: flex;
+        flex-flow: row nowrap;
+        position: relative;
+        justify-content: space-between;
+        width: 410px ;
+    }
+    
+    .rightside2_text1 {
+        color:#009A2B; 
+        font-weight:400;
+        font-size: 20px;
+        line-height: 23px;
+    }
+
+    .rightside2_text2, .rightside2_text3, .rightside2_text4 {
+
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+
+    }
+
+    
+    .rightside2_text2 {display:flex}
+
+
+    .rightside2_text5 {
+
+        position:absolute;
+        top: 61px;
+        font-size: 22px;
+        line-height: 25.3px ;
+        width: 438px;
+        
+    }
+
+    .rightside2_text6 {
+        position:absolute;
+        top: 97px;
+        left: 221px;
+        font-size: 12px;
+        line-height: 13.8px;
+        width: 239px;
+
+    }
+
+    .line13 {
+            width: 410px;
+            position: absolute;
+            top: 36px;
+    }
+
+    .line14 {
+        width: 308px;
+        position: absolute;
+        top: 36px;
+}
+    
+
+    .inputBox1, .inputBox2, .inputBox3,
+    .inputBox4, .inputBox5, .inputBox6,
+    .inputBox7, .inputBox8, .inputBox9
+    {
+        
+        position: absolute;
+        border: 1px solid #000000;
+        border-radius: 5px; 
+        outline: none; 
+        font-size: 20px;
+        line-height: 23px;
+        height: 40px;
+        box-sizing: border-box;
+        padding: 8px;
+
+    }
+
+    .inputBox1 {
+        width: 460px;
+        top: 111px;
+    }
+
+    .inputBox2 {
+        width: 221px;
+        top: 166px;
+    }
+
+    .inputBox3 {
+        width: 221px;
+        left: 239px;
+        top: 166px;
+    }
+
+    .inputBox4 {
+        width: 460px;
+        left: 0px;
+        top: 221px;
+    }
+
+    .inputBox5 {
+        width: 150px;
+        top: 276px;
+    }
+
+    .inputBox6 {
+        width: 160px;
+        top: 276px;
+        left: 160px;
+    }
+
+    .inputBox7 {
+        width: 125px;
+        top: 276px;
+        left: 335px;
+    }
+
+    .inputBox8 {
+        width: 145px;
+        top: 331px;
+    }
+
+    .inputBox9 {
+        width: 300px;
+        top: 331px;
+        left: 160px;
+    }
+
+    .paymentBox {
+        width:460px;
+        height: 45px;
+        position:absolute; 
+        top: 391px; 
+        color:white; 
+        background:#000000; 
+        font-size: 20px;
+        line-height:23px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rightside3 {
+        width: 460px;
+        /* border: 1px black solid; */
+        margin-top: 70px;
+        margin-left: 102px;
+        position: relative;
+
+    }
+
+    .rightside3_text1{
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 37px;
+        color: #000000;
+
+    }
+    
+    .rightside3_text2 {
+        margin-top:15px;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 37px;
+        color: #000000;
+
+    }
+
+    .rightside3_text3 {
+        box-sizing: border-box;
+        margin-top: 12px;
+        width: 460px;
+        height: 126px;
+        padding: 10px;
+        border: 1px solid #000000;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 130%;
+        margin-bottom: 20px;
+    }
+
+    .rightside3_text4 {
+        position: absolute;
+        top: 151px;
+        left:320px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 130%;
+        display: flex;
+        align-items: center;
+    }
+
+    .rightside3_text4 img {
+        margin-left: 5px;
+        width: 20px;
+        height: 20px;
+    }
+
+
+    .rightside3_text5 {
+        margin-top: 20px;
+        margin-bottom: 12px;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 37px;
+    }
+    
+    .rightside3_visa {
+        margin-left: 30px;
+    }
+
+    .rightside3_masterCard {
+        margin-left: 10px; 
+    }
+
+    .rightside3_PayPal, .rightside3_google {
+        margin-left: 20px;
+    }
+
+    .rightside3_PayPal {
+        margin-right: 30px;
+    }
+
+    .rightside3_googlePay {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .rightside3_radio {
+        width: 20px;
+        aspect-ratio: 1;
+        background: #FFFFFF;
+        border: 1px solid #C7C7C7;
+        outline: none;
+    }
+
+    .rightside3_cardInput {
+        box-sizing: border-box;
+        width: 460px;
+        height: 50px;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 23px;
+        color: #000000;
+        opacity: 0.7;
+        padding: 15px;
+        margin-top: 15px;
+        }
+
+        .rightside3_select1, .rightside3_select2, .rightside3_select3 {
+            box-sizing: border-box;
+            height: 50px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 23px;
+            margin-top: 17px;
+            padding-left: 15px;
+           
+
+        }
+
+        .rightside3_select1 {
+            width: 70px;
+        }
+
+        .rightside3_select3 {
+            width: 230px;
+        }
+
+        .rightside3_select2 {
+            width: 160px;
+        }
+
+        .dropform {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 18px;
+            color: #000000;
+            opacity: 0.8;
+            margin-top: 80px;
+            text-align: center;
+
+        }
 }
